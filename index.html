@@ -39,27 +39,6 @@
             src: 'https://theprojectofficial.github.io/new/audio/blank.ogg'
         });
 
-        function ThrowawayStaller() {
-            if (jumpeditself) {
-                $('#stalled-start').remove();
-                $('#bypass-stall').remove();
-
-                $('#stalled-start-behind').addClass('qr');
-                setTimeout(function() {
-                    $('#stalled-start-behind').remove();
-                }, 250);
-
-                return;
-            }
-
-            $('#stalled-start').addClass('nomore');
-            setTimeout(function() {
-                $('#stalled-start').remove();
-                $('#stalled-start-behind').remove();
-                $('#bypass-stall').remove();
-            }, 500);
-        }
-
         $(document).ready(function() {
             if (getCookie("SEEN-WARNING") != "One") {
                 //window.location = "/warning.php";
@@ -76,8 +55,6 @@
             });
         });
 
-        Jump(function() {
-            ThrowawayStaller();
 
             intro = new Howl({
                 src: ['https://theprojectofficial.github.io/stuff/nnintro.ogg'],
@@ -94,7 +71,7 @@
 
             tokei();
             setInterval(tokei, 9);
-        });
+	    hajimaru();
 
         function hajimaru() {
             intro.play();
