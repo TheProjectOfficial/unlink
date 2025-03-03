@@ -70,14 +70,6 @@
                 jumpeditself = false;
                 BLANKSOUND.play();
             });
-
-            setInterval(function() {
-                $.get("https://tm.systemspace.network/api/loader2.php?type=unlink11", function(result) {
-                    if (result !== "unlink11") {
-                        window.location.reload(true);
-                    }
-                });
-            }, 60000);
         });
 
         Jump(function() {
