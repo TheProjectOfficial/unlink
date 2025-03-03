@@ -4,7 +4,7 @@ function chainSfx(chain) {
 	if (!el) { return; }
 
 	new Howl({
-		src: `/unlink/stuff/voice/speech_${el}_en.ogg`,
+		src: `https://tm.systemspace.network/unlink/stuff/voice/speech_${el}_en.ogg`,
 		autoplay: true,
 		volume: 1.5,
 		onend: function() {
